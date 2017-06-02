@@ -53,7 +53,7 @@ yogViewEngine.prototype.renderFile = function (filepath, locals, done) {
     function render() {
         var sentData = false;
         var content = [];
-        // makeStream的output是已经由swig编译过后的东西
+        // makeStream的output是已经由swig编译过后的东西（也就是所谓的tpl流）
         var renderStream = me.engine.makeStream(filepath, _.mixin(locals, {
                 _yog: prototols
             }))
