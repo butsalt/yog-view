@@ -44,7 +44,8 @@ yogViewEngine.prototype.renderFile = function (filepath, locals, done) {
         }));
     }
     if (prototols.bigpipe && prototols.bigpipe.isSpiderMode) {
-        // 获取所有异步pagelet信息
+        // 处于spiderMode，要同步渲染pagelet
+        // 所以要预先获取所有渲染pagelet时要用到的数据
         preFetch.push(prototols.bigpipe.prepareAllSources());
     }
 
